@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer_Auction_WebAPI", "NLayer_Auction_WebAPI\NLayer_Auction_WebAPI.csproj", "{3861C02F-E323-491A-9C95-3B001475144A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer_Auction_WebAPI_WEB", "NLayer_Auction_WebAPI\NLayer_Auction_WebAPI_WEB.csproj", "{3861C02F-E323-491A-9C95-3B001475144A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer_Auction_WebAPI_DAL", "NLayer_Auction_WebAPI_DAL\NLayer_Auction_WebAPI_DAL.csproj", "{2587935C-7113-427A-AAE2-203684AC55DB}"
 EndProject
