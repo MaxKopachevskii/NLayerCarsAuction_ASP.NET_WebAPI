@@ -98,6 +98,37 @@ namespace NLayer_Auction_WebAPI_BLL.Services
             return mapper.Map<IEnumerable<Car>, List<CarDTO>>(Database.Cars.GetAll());
         }
 
+        public IEnumerable<CarDTO> GetAllCheckedCars()
+        {
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Car, CarDTO>()).CreateMapper();
+            return mapper.Map<IEnumerable<Car>, List<CarDTO>>(Database.Cars.GetAllChecked());
+        }
+
+
+        public IEnumerable<CarDTO> GetAllUnCheckedCars()
+        {
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Car, CarDTO>()).CreateMapper();
+            return mapper.Map<IEnumerable<Car>, List<CarDTO>>(Database.Cars.GetAllUnChecked());
+        }
+
+        public IEnumerable<CarDTO> GetAllSedans()
+        {
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Car, CarDTO>()).CreateMapper();
+            return mapper.Map<IEnumerable<Car>, List<CarDTO>>(Database.Cars.GetAllSedans());
+        }
+
+        public IEnumerable<CarDTO> GetAllCoupes()
+        {
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Car, CarDTO>()).CreateMapper();
+            return mapper.Map<IEnumerable<Car>, List<CarDTO>>(Database.Cars.GetAllCoupes());
+        }
+
+        public IEnumerable<CarDTO> GetAllUniversals()
+        {
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Car, CarDTO>()).CreateMapper();
+            return mapper.Map<IEnumerable<Car>, List<CarDTO>>(Database.Cars.GetAllUniversals());
+        }
+
         public IEnumerable<CategoryDTO> GetAllCategories()
         {
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Category, CategoryDTO>()).CreateMapper();

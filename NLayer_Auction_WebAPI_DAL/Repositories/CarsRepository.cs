@@ -44,6 +44,31 @@ namespace NLayer_Auction_WebAPI_DAL.Repositories
             return db.Cars;
         }
 
+        public IEnumerable<Car> GetAllChecked()
+        {
+            return db.Cars.Where(item => item.IsCheck == true);
+        }
+
+        public IEnumerable<Car> GetAllUnChecked()
+        {
+            return db.Cars.Where(item => item.IsCheck == false);
+        }
+
+        public IEnumerable<Car> GetAllSedans()
+        {
+            return db.Cars.Where(item => item.CategoryId == 1);
+        }
+
+        public IEnumerable<Car> GetAllCoupes()
+        {
+            return db.Cars.Where(item => item.CategoryId == 2);
+        }
+
+        public IEnumerable<Car> GetAllUniversals()
+        {
+            return db.Cars.Where(item => item.CategoryId == 3);
+        }
+
         public void Update(Car item)
         {
             db.Entry(item).State = EntityState.Modified;

@@ -22,7 +22,7 @@ namespace NLayer_Auction_WebAPI.Controllers
 
         public IEnumerable<CarViewModel> GetAll()
         {
-            IEnumerable<CarDTO> phoneDtos = auctionService.GetAllCars();
+            IEnumerable<CarDTO> phoneDtos = auctionService.GetAllCheckedCars();
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<CarDTO, CarViewModel>()).CreateMapper();
             var services = mapper.Map<IEnumerable<CarDTO>, List<CarViewModel>>(phoneDtos);
             return services;
@@ -55,5 +55,50 @@ namespace NLayer_Auction_WebAPI.Controllers
             auctionService.DeleteCar(id);
             auctionService.Save();
         }
+
+        [Route("api/Cars/Sedan")]
+        [HttpGet]
+        public IEnumerable<CarViewModel> GetAllSedans()
+        {
+            IEnumerable<CarDTO> phoneDtos = auctionService.GetAllSedans();
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<CarDTO, CarViewModel>()).CreateMapper();
+            var services = mapper.Map<IEnumerable<CarDTO>, List<CarViewModel>>(phoneDtos);
+            return services;
+        }
+
+        [Route("api/Cars/Coupe")]
+        [HttpGet]
+        public IEnumerable<CarViewModel> GetAllCoupes()
+        {
+            IEnumerable<CarDTO> phoneDtos = auctionService.GetAllCoupes();
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<CarDTO, CarViewModel>()).CreateMapper();
+            var services = mapper.Map<IEnumerable<CarDTO>, List<CarViewModel>>(phoneDtos);
+            return services;
+        }
+
+        [Route("api/Cars/Universal")]
+        [HttpGet]
+        public IEnumerable<CarViewModel> GetAllUniversals()
+        {
+            IEnumerable<CarDTO> phoneDtos = auctionService.GetAllUniversals();
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<CarDTO, CarViewModel>()).CreateMapper();
+            var services = mapper.Map<IEnumerable<CarDTO>, List<CarViewModel>>(phoneDtos);
+            return services;
+        }
+
+        //Какой-то трабл именно в обновлении обьекта
+        //[Route("api/Cars/{id}/{rate}")]
+        //[HttpPut]
+        //public void MakeRate(int id, int rate)
+        //{
+        //    var car = auctionService.GetCar(id);
+        //    var _car = new CarDTO { Id = car.Id, Name = car.Name, ShortDesc = car.ShortDesc, LongDesc = car.LongDesc, Price = car.Price, Date = car.Date, Img = car.Img, IsCheck = car.IsCheck, UserName = car.UserName };
+        //    if ((rate - car.Price) > 999)
+        //    {
+        //        _car.Price = rate;
+        //        auctionService.EditCar(_car);
+        //        auctionService.Save();
+        //    }
+        //}
     }
 }

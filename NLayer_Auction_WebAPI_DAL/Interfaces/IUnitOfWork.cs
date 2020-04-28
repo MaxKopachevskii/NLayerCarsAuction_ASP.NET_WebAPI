@@ -1,4 +1,5 @@
 ﻿using NLayer_Auction_WebAPI_DAL.Entities;
+using NLayer_Auction_WebAPI_DAL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,8 @@ namespace NLayer_Auction_WebAPI_DAL.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
-        IRepository<Car> Cars { get; }
-        IRepository<Category> Categories { get; }
+        CarsRepository Cars { get; }
+        CategoriesRepository Categories { get; }
         void Save();
     }
 }

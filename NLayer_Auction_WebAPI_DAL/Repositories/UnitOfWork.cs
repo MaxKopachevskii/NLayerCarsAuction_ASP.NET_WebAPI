@@ -20,7 +20,7 @@ namespace NLayer_Auction_WebAPI_DAL.Repositories
             db = new AuctionDbContext(connectionString);
         }
 
-        public IRepository<Car> Cars
+        public CarsRepository Cars
         {
             get
             {
@@ -30,7 +30,7 @@ namespace NLayer_Auction_WebAPI_DAL.Repositories
             } 
         }
 
-        public IRepository<Category> Categories
+        public CategoriesRepository Categories
         {
             get
             {
