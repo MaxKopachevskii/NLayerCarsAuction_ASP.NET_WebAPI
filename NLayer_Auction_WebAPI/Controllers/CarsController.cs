@@ -85,7 +85,7 @@ namespace NLayer_Auction_WebAPI.Controllers
             var services = mapper.Map<IEnumerable<CarDTO>, List<CarViewModel>>(phoneDtos);
             return services;
         }
-
+        //Vasserman`s commit
         //Какой-то трабл именно в обновлении обьекта
         //[Route("api/Cars/{id}/{rate}")]
         //[HttpPut]
