@@ -80,6 +80,23 @@ namespace NLayer_Auction_WebAPI_BLL.Services
             };
             Database.Cars.Update(_car);
         }
+        
+        public void EditCarPrice(int id,int price)
+        {
+            var car = Database.Cars.Get(id);
+            if ((price - car.Price) > 999)
+            {
+                car.Price = price;
+                Database.Cars.Update(car);
+            }
+        }
+
+        public void EditCarCheck(int id, bool flag)
+        {
+            var car = Database.Cars.Get(id);
+            car.IsCheck = flag;
+            Database.Cars.Update(car);
+        }
 
         public void EditCategory(CategoryDTO category)
         {
