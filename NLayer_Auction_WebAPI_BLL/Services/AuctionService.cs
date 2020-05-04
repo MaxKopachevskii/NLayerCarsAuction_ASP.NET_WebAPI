@@ -96,7 +96,7 @@ namespace NLayer_Auction_WebAPI_BLL.Services
             var car = Database.Cars.Get(id);
             car.IsCheck = flag;
             Database.Cars.Update(car);
-        
+        }
 
         public void EditCategory(CategoryDTO category)
         {
