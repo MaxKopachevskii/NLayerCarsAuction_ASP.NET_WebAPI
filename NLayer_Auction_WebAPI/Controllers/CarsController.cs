@@ -85,20 +85,15 @@ namespace NLayer_Auction_WebAPI.Controllers
             var services = mapper.Map<IEnumerable<CarDTO>, List<CarViewModel>>(phoneDtos);
             return services;
         }
+        
+        [Route("api/Cars/{id}/{rate}")]
+        [HttpPut]
+        public void MakeRate(int id, int rate)
+        {
+            auctionService.EditCarPrice(id, rate);
+            auctionService.Save();
+        }
 
-        //Какой-то трабл именно в обновлении обьекта
-        //[Route("api/Cars/{id}/{rate}")]
-        //[HttpPut]
-        //public void MakeRate(int id, int rate)
-        //{
-        //    var car = auctionService.GetCar(id);
-        //    var _car = new CarDTO { Id = car.Id, Name = car.Name, ShortDesc = car.ShortDesc, LongDesc = car.LongDesc, Price = car.Price, Date = car.Date, Img = car.Img, IsCheck = car.IsCheck, UserName = car.UserName };
-        //    if ((rate - car.Price) > 999)
-        //    {
-        //        _car.Price = rate;
-        //        auctionService.EditCar(_car);
-        //        auctionService.Save();
-        //    }
-        //}
+      
     }
 }
