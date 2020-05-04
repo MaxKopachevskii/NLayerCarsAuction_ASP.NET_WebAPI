@@ -27,5 +27,21 @@ namespace NLayer_Auction_WebAPI.Controllers
             var services = mapper.Map<IEnumerable<CarDTO>, List<CarViewModel>>(phoneDtos);
             return services;
         }
+        
+        [Route("api/Managers/{id}/{flag}")]
+        [HttpPut]
+        public void MakeRate(int id, bool flag)
+        {
+            if (flag == true)
+            {
+                auctionService.EditCarCheck(id, flag);
+                auctionService.Save();
+            }
+            if (flag == false)
+            {
+                auctionService.DeleteCar(id);
+                auctionService.Save();
+            }
+        }
     }
 }
