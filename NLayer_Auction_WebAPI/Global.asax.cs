@@ -1,10 +1,12 @@
 using Ninject;
 using Ninject.Modules;
 using Ninject.Web.Mvc;
+using NLayer_Auction_WebAPI.Models;
 using NLayer_Auction_WebAPI.Util;
 using NLayer_Auction_WebAPI_BLL.Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -18,6 +20,7 @@ namespace NLayer_Auction_WebAPI
     {
         protected void Application_Start()
         {
+            Database.SetInitializer(new AppDbInitializer());
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

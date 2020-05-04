@@ -11,6 +11,7 @@ using System.Web.Http;
 
 namespace NLayer_Auction_WebAPI.Controllers
 {
+    //Controller for interaction with categories
     public class CategoriesController : ApiController
     {
         AuctionService auctionService;
@@ -19,6 +20,7 @@ namespace NLayer_Auction_WebAPI.Controllers
             auctionService = new AuctionService();
         }
 
+        //Get all categories
         public IEnumerable<CategoryViewModel> GetAll()
         {
             IEnumerable<CategoryDTO> phoneDtos = auctionService.GetAllCategories();
@@ -27,26 +29,61 @@ namespace NLayer_Auction_WebAPI.Controllers
             return categories;
         }
 
+        //Get category with id №
         public CategoryDTO Get(int id)
         {
             var category = auctionService.GetCategory(id);
             return category;
         }
 
+        //Create new category
+        [Authorize(Roles = "admin,manager")]
         [HttpPost]
-        public void Create([FromBody]CategoryViewModel category)
+        public IHttpActionResult Create([FromBody]CategoryViewModel category)
         {
-            CategoryDTO _category = new CategoryDTO { Id = category.Id, Name = category.Name, Desc = category.Desc };
-            auctionService.CreateCategory(_category);
-            auctionService.Save();
+            try
+            {
+                if (category != null)
+                {
+                    CategoryDTO _category = new CategoryDTO { Id = category.Id, Name = category.Name, Desc = category.Desc };
+                    auctionService.CreateCategory(_category);
+                    auctionService.Save();
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
 
+        //Edit category with id №
+        [Authorize(Roles = "admin,manager")]
         [HttpPut]
-        public void Edit(int id,[FromBody]CategoryViewModel category)
+        public IHttpActionResult Edit(int id,[FromBody]CategoryViewModel category)
         {
-            CategoryDTO _category = new CategoryDTO { Id = category.Id, Name = category.Name, Desc = category.Desc };
-            auctionService.EditCategory(_category);
-            auctionService.Save();
+            try
+            {
+                if (category != null)
+                {
+                    CategoryDTO _category = new CategoryDTO { Id = category.Id, Name = category.Name, Desc = category.Desc };
+                    auctionService.EditCategory(_category);
+                    auctionService.Save();
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
     }
 }
