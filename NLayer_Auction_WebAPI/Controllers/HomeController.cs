@@ -14,5 +14,9 @@ namespace NLayer_Auction_WebAPI.Controllers
 
             return View();
         }
+        public ActionResult Register()
+        {
+            return View();
+        }
     }
 }

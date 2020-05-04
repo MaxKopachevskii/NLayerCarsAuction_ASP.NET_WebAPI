@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+<div>
+    <label>email</label><br />
+    <input type="email" id="email" /> <br /><br />
+    <label>пароль</label><br />
+    <input type="password" id="password" /><br /><br />
+    <label>пароль</label><br />
+    <input type="password" id="confirmpassword" /><br /><br />
+    <input type="submit" id="submit" value="Register" />
+</div>
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            $('#submit').click(function (e) {
+                e.preventDefault();
+                var data = {
+                    Email: $('#email').val(),
+                    Password: $('#password').val(),
+                    ConfirmPassword: $('#confirmpassword').val()
+                };
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/api/Account/Register',
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(data),
+                    success: function (data) {
+                        alert("Done");
+                    },
+                    fail: function (data) {
+                        alert("Unknown error");
+                    }
+                });
+            });
+        })
+    </script>
+}

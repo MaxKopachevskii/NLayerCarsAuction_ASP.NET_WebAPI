@@ -22,3 +22,15 @@ C:\Users\Admin\source\repos\NLayer_Auction_WebAPI\NLayer_Auction_WebAPI_DAL\obj\
 C:\Users\Admin\source\repos\NLayer_Auction_WebAPI\NLayer_Auction_WebAPI_DAL\obj\Debug\NLayer_Auction_WebAPI_DAL.csproj.CopyComplete
 C:\Users\Admin\source\repos\NLayer_Auction_WebAPI\NLayer_Auction_WebAPI_DAL\obj\Debug\NLayer_Auction_WebAPI_DAL.dll
 C:\Users\Admin\source\repos\NLayer_Auction_WebAPI\NLayer_Auction_WebAPI_DAL\obj\Debug\NLayer_Auction_WebAPI_DAL.pdb
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\bin\Debug\NLayer_Auction_WebAPI_DAL.dll.config
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\bin\Debug\NLayer_Auction_WebAPI_DAL.dll
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\bin\Debug\NLayer_Auction_WebAPI_DAL.pdb
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\bin\Debug\EntityFramework.dll
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\bin\Debug\EntityFramework.xml
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\obj\Debug\NLayer_Auction_WebAPI_DAL.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\obj\Debug\NLayer_Auction_WebAPI_DAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\obj\Debug\NLayer_Auction_WebAPI_DAL.csproj.CopyComplete
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\obj\Debug\NLayer_Auction_WebAPI_DAL.dll
+C:\Users\Admin\source\repos\NLayer_Auction_WebAPI_v2\NLayerCarsAuction_ASP.NET_WebAPI\NLayer_Auction_WebAPI_DAL\obj\Debug\NLayer_Auction_WebAPI_DAL.pdb

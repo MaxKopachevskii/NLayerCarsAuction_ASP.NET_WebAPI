@@ -30,7 +30,7 @@ namespace NLayer_Auction_WebAPI.Controllers
         
         [Route("api/Managers/{id}/{flag}")]
         [HttpPut]
-        public void MakeRate(int id, bool flag)
+        public void CheckCar(int id, bool flag)
         {
             if (flag == true)
             {

@@ -93,7 +93,5 @@ namespace NLayer_Auction_WebAPI.Controllers
             auctionService.EditCarPrice(id, rate);
             auctionService.Save();
         }
-
-      
     }
 }
