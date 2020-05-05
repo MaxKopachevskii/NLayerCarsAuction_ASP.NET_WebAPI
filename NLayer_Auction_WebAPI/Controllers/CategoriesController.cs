@@ -85,5 +85,21 @@ namespace NLayer_Auction_WebAPI.Controllers
                 return BadRequest(ex.ToString());
             }
         }
+        
+        //Delete Categories id №
+        [Authorize(Roles = "admin,manager")]
+        public IHttpActionResult Delete(int id)
+        {
+            try
+            {
+                auctionService.DeleteCategory(id);
+                auctionService.Save();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
     }
 }
