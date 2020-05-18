@@ -12,11 +12,11 @@ namespace NLayer_Auction_WebAPI.Controllers
         {
             ViewBag.Title = "Home Page";
 
-            return View();
+            return View("Index");
         }
         public ActionResult Register()
         {
-            return View();
+            return View("Register");
         }
     }
 }
